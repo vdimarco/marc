@@ -4,7 +4,7 @@
 
 This repository is the official implementation of our paper:
 
-[The Surprising Effectiveness of Test-Time Training for Abstract Reasoning](http://www.mit.edu/~akyurek/ttt.pdf)
+[The Surprising Effectiveness of Test-Time Training for Abstract Reasoning](http://www.mit.edu/~akyurek/papers/ttt.pdf)
 
 Ekin Akyürek, Mehul Damani, Linlu Qiu, Han Guo, Yoon Kim, Jacob Andreas
 
