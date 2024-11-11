@@ -92,7 +92,7 @@ tti_folder=/path/to/tti/folder
 mkdir -p $tti_folder
 # Tell where your Fintuned (named as base) and TTT checkpoints are
 base_checkpoint_dir=/path/to/finetuned/model/folder/
-ttt_fodler=/path/to/ttt/folder
+ttt_folder=/path/to/ttt/folder
 
 # if solution file is given predict will evaluate the model
 solution_file=/kaggle/input/arc-prize-2024/arc-agi_evaluation_solutions_selected.json
