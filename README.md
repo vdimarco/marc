@@ -29,7 +29,7 @@ pip install -r requirements.txt
 >📋 We will be uploading checkpoints to the hugging face repositories very soon:
 > - For Llama-3.x checkpoints: https://huggingface.co/meta-llama
 > - For our finetuned Llama-3 8B checkpoints: https://huggingface.co/ekinakyurek/marc-8B-finetuned-llama3
-> - For finetuned BARC checkpoints: https://huggingface.co/barc0/Llama-3.1-ARC-Potpourri-Transduction-8B-test-time-finetune
+> - For finetuned BARC checkpoints: https://huggingface.co/barc0/Llama-3.1-ARC-Potpourri-Transduction-8B
 > - For our LoRA adapters for Llama-3 8B model: https://huggingface.co/ekinakyurek/marc-lora-adapters-8B-finetuned-llama3
 > - For our Lora adapter for BARC model: https://huggingface.co/ekinakyurek/marc-lora-adapters-Llama-3.1-ARC-Potpourri-Transduction-8B
 
