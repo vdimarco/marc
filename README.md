@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 >📋 You need download the ARC dataset from kaggle link https://www.kaggle.com/competitions/arc-prize-2024/data
 
->📋 We will be uploading checkpoints to the hugging face repositories very soon:
+>📋 You can reach out finetuned models and TTT checkpoints from the following links:
 > - For Llama-3.x checkpoints: https://huggingface.co/meta-llama
 > - For our finetuned Llama-3 8B checkpoints: https://huggingface.co/ekinakyurek/marc-8B-finetuned-llama3
 > - For finetuned BARC checkpoints: https://huggingface.co/barc0/Llama-3.1-ARC-Potpourri-Transduction-8B
