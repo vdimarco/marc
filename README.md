@@ -14,10 +14,14 @@ To install requirements, you can start a fresh conda environment, and install fo
 
 ```shell
 git clone --recursive git://github.com/ekinakyurek/marc
+cd marc/
 # For TTT pipeline, we used a fork of torchtune library.
 # You need to install it first
 conda create -n arc python=3.10
 # Install torchtune with my specific fork
+# We need this as editable because we actually use some files
+# under third_party/torchtune/recipes/ which doesn't come
+# if you just do pip install
 cd third_party/torchtune
 pip install -e .
 # install other required libraries for torchtune
