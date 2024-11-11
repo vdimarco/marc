@@ -17,8 +17,10 @@ git clone --recursive git://github.com/ekinakyurek/marc
 # For TTT pipeline, we used a fork of torchtune library.
 # You need to install it first
 conda create -n arc python=3.10
-# You can install with pip or clone and install as editable
-pip install torchtune@git+https://github.com/ekinakyurek/torchtune.git@ekin/llama32
+# Install torchtune with my specific fork
+cd third_party/torchtune
+pip install -e .
+# install other required libraries for torchtune
 pip install torch torchao --pre --upgrade --index-url https://download.pytorch.org/whl/nightly/cu121
 
 # Then we have simple requirements can be installed as:
