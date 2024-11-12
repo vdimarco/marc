@@ -101,7 +101,7 @@ base_checkpoint_dir=/path/to/finetuned/model/folder/
 ttt_folder=/path/to/ttt/folder
 
 # if solution file is given predict will evaluate the model
-solution_file=/kaggle/input/arc-prize-2024/arc-agi_evaluation_solutions_selected.json
+solution_file=/kaggle/input/arc-prize-2024/arc-agi_evaluation_solutions.json
 
 python predict.py \
 --experiment_folder=$tti_folder \
