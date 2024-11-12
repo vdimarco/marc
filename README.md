@@ -94,15 +94,25 @@ python test_time_train.py --lora_config=$lora_config_file \
 To do inference with TTT, you run `predict.py`
 
 ```shell
-# You need to tell where predictions and submissions should be saved
-tti_folder=/path/to/tti/folder
-mkdir -p $tti_folder
+# Specify data path
+data_file=/kaggle/input/arc-prize-2024/arc-agi_evaluation_challenges.json
 # Tell where your Fintuned (named as base) and TTT checkpoints are
 base_checkpoint_dir=/path/to/finetuned/model/folder/
 ttt_folder=/path/to/ttt/folder
 
 # if solution file is given predict will evaluate the model
 solution_file=/kaggle/input/arc-prize-2024/arc-agi_evaluation_solutions.json
+
+
+temperature=0
+n_sample=1
+
+# this should be same as your ttt
+max_lora_rank=128
+# You need to tell where predictions and submissions should be saved
+tti_folder=/path/to/tti/folder
+mkdir -p $tti_folder
+
 
 python predict.py \
 --experiment_folder=$tti_folder \
@@ -112,7 +122,7 @@ python predict.py \
 --n_sample=$n_sample \
 --data_file=$data_file \
 --solution_file=$solution_file \
---max_lora_rank=$lora_rank \
+--max_lora_rank=$max_lora_rank \
 --include_n=1 \
 --new_format
 ```
