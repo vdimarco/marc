@@ -123,7 +123,7 @@ python predict.py \
 # For Llama3 and 3.1 models
 conda create -n vllm python=3.10
 conda activate vllm
-pip install torchtune@git+https://github.com/ekinakyurek/vllm.git@ekin/torchtunecompat
+pip install vllm@git+https://github.com/ekinakyurek/vllm.git@ekin/torchtunecompat
 pip install -r requirements
 ```
 
@@ -131,7 +131,7 @@ pip install -r requirements
 # For Llama3.2 models
 conda create -n vllmnew python=3.10
 conda activate vllmnew
-pip install torchtune@git+https://github.com/ekinakyurek/vllm.git@ekin/ekin/newvllm
+pip install vllm@git+https://github.com/ekinakyurek/vllm.git@ekin/ekin/newvllm
 pip install -r requirements
 ```
 # Predictions from models
