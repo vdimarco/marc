@@ -18,6 +18,7 @@ cd marc/
 # For TTT pipeline, we used a fork of torchtune library.
 # You need to install it first
 conda create -n arc python=3.10
+conda activate arc
 # Install torchtune with my specific fork
 # We need this as editable because we actually use some files
 # under third_party/torchtune/recipes/ which doesn't come
@@ -116,16 +117,23 @@ python predict.py \
 --new_format
 ```
 
->📋  For Llama-3 and Llama-3.2 we used different versions of VLLM, and the second one is not compatible with torchtune version that we use. So, we give setup instructions for vllm for llama3 and vllm for llama3-2 for reproducibiltiy. We use seperate conda environments for inference pipeline.
+>📋  For Llama-3 and Llama-3.2 we used different versions of VLLM, and these are not compatible with torchtune version that we use. So, we give setup instructions for vllm for llama3 and vllm for llama3-2 for reproducibiltiy. We use seperate conda environments for inference pipeline.
 
 ```shell
 # For Llama3 and 3.1 models
 conda create -n vllm python=3.10
+conda activate vllm
 pip install torchtune@git+https://github.com/ekinakyurek/vllm.git@ekin/torchtunecompat
+pip install -r requirements
 ```
 
 ```shell
 # For Llama3.2 models
 conda create -n vllmnew python=3.10
+conda activate vllmnew
 pip install torchtune@git+https://github.com/ekinakyurek/vllm.git@ekin/ekin/newvllm
+pip install -r requirements
 ```
+# Predictions from models
+- For our finetuned Llama-3 8B + TTT predictions: https://huggingface.co/ekinakyurek/marc-predictions-8B-finetuned-ttted/
+- For finetuned BARC + TTT predictions: https://huggingface.co/ekinakyurek/marc-predictions-Llama-3.1-ARC-Potpourri-Transduction-8B-tted/
