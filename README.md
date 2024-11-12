@@ -67,16 +67,15 @@ lora_rank=128
 lora_alpha=16.0
 lora_to_output=False # doesn't apply for Llama3.2 models for now.
 # You can specify how many tasks you want train for.
-num_tasks=100
+num_tasks=15
 
 # You can run the main script
 python test_time_train.py --lora_config=$lora_config_file \
---base_checkpoint_dir \
-$base_checkpoint_dir \
---experiment_folder $ttt_folder \
---data_file $data_file \
---batch_size $batch_size \
---epochs $epochs \
+--base_checkpoint_dir=$base_checkpoint_dir \
+--experiment_folder=$ttt_folder \
+--data_file=$data_file \
+--batch_size=$batch_size \
+--epochs=$epochs \
 --num_tasks=${num_tasks} \
 --lora_rank=$lora_rank \
 --lora_alpha=$lora_alpha \
@@ -104,15 +103,16 @@ ttt_folder=/path/to/ttt/folder
 # if solution file is given predict will evaluate the model
 solution_file=/kaggle/input/arc-prize-2024/arc-agi_evaluation_solutions_selected.json
 
-python predict.py --experiment_folder=$tti_folder \
---pretrained_checkpoint $base_checkpoint_dir \
---lora_checkpoints_folder $ttt_folder \
---temperature $temperature \
---n_sample $n_sample \
---data_file $data_file \
---solution_file $solution_file \
+python predict.py \
+--experiment_folder=$tti_folder \
+--pretrained_checkpoint=$base_checkpoint_dir \
+--lora_checkpoints_folder=$ttt_folder \
+--temperature=$temperature \
+--n_sample=$n_sample \
+--data_file=$data_file \
+--solution_file=$solution_file \
 --max_lora_rank=$lora_rank \
---include_n=1 \ # means we use leave-1-out prompts
+--include_n=1 \
 --new_format
 ```
 
