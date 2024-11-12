@@ -51,7 +51,7 @@ save_adapter_weights_only: True
 # Dataset and Sampler
 dataset:
    _component_: torchtune.datasets.arc_dataset
-   source: /raid/lingo/akyurek/git/arc/data/tasks/more_both_aug_fix_drops
+   source: data/dummy/
    train_on_input: False
    unmask_outputs: True # we'll get loss from all outputs after the first demonstration, very hacky, tokenizer & formatting specific
 
