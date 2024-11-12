@@ -21,7 +21,7 @@
 # Tokenizer
 tokenizer:
   _component_: torchtune.models.llama3.llama3_tokenizer
-  path: /raid/lingo/models/Meta-Llama-3-8B-Instruct/original/tokenizer.model
+  path: checkpoints/base/Meta-Llama-3-8B-Instruct/original/tokenizer.model
   max_seq_len: null
 
 # Dataset
@@ -40,7 +40,7 @@ model:
 
 checkpointer:
   _component_: torchtune.training.FullModelHFCheckpointer
-  checkpoint_dir: /raid/lingo/models/Meta-Llama-3-8B-Instruct/
+  checkpoint_dir: checkpoints/base/Meta-Llama-3-8B-Instruct/
   checkpoint_files: [
     #  hf_model_0001_0.pt,
     #  hf_model_0002_0.pt,
@@ -56,7 +56,7 @@ checkpointer:
      # pytorch_model-0004-of-0004.bin,
   ]
   recipe_checkpoint: recipe_state.pt
-  output_dir: /raid/lingo/akyurek/git/agi/experiments/pretrain/debug/
+  output_dir: experiments/pretrain/debug/
   model_type: LLAMA3
 resume_from_checkpoint: False
 
@@ -94,6 +94,6 @@ metric_logger:
   job_type: PT
   group: pretrain
 
-output_dir: /raid/lingo/akyurek/git/agi/experiments/pretrain/debug/
+output_dir: experiments/pretrain/debug/
 log_every_n_steps: 1
 log_peak_memory_stats: False

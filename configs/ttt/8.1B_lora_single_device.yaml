@@ -29,7 +29,7 @@ model:
 # Tokenizer
 tokenizer:
   _component_: torchtune.models.llama3.llama3_tokenizer
-  path: /raid/lingo/models/Meta-Llama-3.1-8B-Instruct/original/tokenizer.model
+  path: checkpoints/base/Meta-Llama-3.1-8B-Instruct/original/tokenizer.model
   max_seq_len: null
 
 checkpointer:
