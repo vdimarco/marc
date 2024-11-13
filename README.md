@@ -141,7 +141,7 @@ pip install -r requirements
 # For Llama3.2 models
 conda create -n vllmnew python=3.10
 conda activate vllmnew
-pip install vllm@git+https://github.com/ekinakyurek/vllm.git@ekin/ekin/newvllm
+pip install vllm@git+https://github.com/ekinakyurek/vllm.git@ekin/newvllm
 pip install -r requirements
 ```
 # Predictions from models
