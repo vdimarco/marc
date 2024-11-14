@@ -29,6 +29,7 @@ pip install -e .
 pip install torch torchao --pre --upgrade --index-url https://download.pytorch.org/whl/nightly/cu121
 
 # Then we have simple requirements can be installed as:
+cd ../..
 pip install -r requirements.txt
 ```
 
@@ -142,7 +143,7 @@ pip install -r requirements
 conda create -n vllmnew python=3.10
 conda activate vllmnew
 pip install vllm@git+https://github.com/ekinakyurek/vllm.git@ekin/newvllm
-pip install -r requirements
+pip install -r requirements.txt
 ```
 # Predictions from models
 - For our finetuned Llama-3 8B + TTT predictions: https://huggingface.co/ekinakyurek/marc-predictions-8B-finetuned-ttted/
